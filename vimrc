@@ -24,7 +24,7 @@ Plugin 'Valloric/YouCompleteMe'
 " Syntax checker
 Plugin 'vim-syntastic/syntastic'
 " Python backend for 'syntastic'
-Plugin 'nvie/vim-flake8'
+"Plugin 'nvie/vim-flake8'
 " Status bar (powerline)
 Plugin 'vim-airline/vim-airline'
 " Awesome staring screen for Vim
@@ -43,7 +43,10 @@ Plugin 'kh3phr3n/python-syntax'
 Plugin 'bling/vim-bufferline'
 " auto focus events"
 Plugin 'tmux-plugins/vim-tmux-focus-events'
-
+" Markdown Preview
+Plugin 'JamshedVesuna/vim-markdown-preview'
+"Auto Format"
+Plugin 'Chiel92/vim-autoformat'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
@@ -169,4 +172,29 @@ tmap <silent> <ScrollWheelUp> <c-w>:call EnterNormalMode()<CR>
 " setup auto read and write
 au FocusGained,BufEnter * :silent! !
 au FocusLost,WinLeave * :silent! w
+
+" markdown using grip
+let vim_markdown_preview_github=1
+let vim_markdown_preview_toggle=1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+"auto flake 8 
+"autocmd BufWritePost *.py call flake8#Flake8()
+
+"auto pep 8
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
+let g:autopep8_on_save = 1
+let g:autopep8_disable_show_diff=1
+" add more aggressive options (--aggressive --aggressive)
+let g:autopep8_aggressive=2
+let g:autopep8_pep8_passes=100
+let g:autopep8_max_line_length=79
+
+"tabs stuff
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
