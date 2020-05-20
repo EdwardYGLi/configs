@@ -19,6 +19,8 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'challenger-deep-theme/vim', {'name': 'challenger-deep-theme'}
 " Smart auto-indentation for Python
 Plugin 'vim-scripts/indentpython.vim'
+"supertab
+Plugin 'ervandew/supertab'
 " Auto-completing engine
 Plugin 'Valloric/YouCompleteMe'
 " Syntax checker
@@ -47,6 +49,10 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 "Auto Format"
 Plugin 'Chiel92/vim-autoformat'
+"isort"
+Plugin 'fisadev/vim-isort'
+
+
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
@@ -198,3 +204,8 @@ nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
+"nerdtree cd
+let g:NERDTreeChDirMode = 2
+" issort stuff
+nnoremap <C-i> :Isort<CR>
+let g:vim_isort_python_version = 'python3'
