@@ -21,7 +21,7 @@
 
 #   Change Prompt
 #   ------------------------------------------------------------
-    export PS1='\[\e[1;33m\][\t]-\[\e[37m\][macbook]:\[\e[1;91m\]\u\[\e[m\]@\[\e[1;36m\]\h:\w\[\e[m\]$ '
+    export PS1='\[\e[1;33m\][\t]-\[\e[37m\][\h]:\[\e[1;91m\]\u\[\e[m\]@\[\e[1;36m\]\h:\w\[\e[m\]$ '
 
 #   Set Paths
 #   ------------------------------------------------------------
@@ -305,8 +305,8 @@ httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grab
     alias py38='source ~/code/venvs/py38/bin/activate'
     
     # certificate for pip 
-    export AWS_CA_BUNDLE="/Users/edwardli/.certs/FW_BUNDLE.crt"
-    export REQUESTS_CA_BUNDLE="/Users/edwardli/.certs/FW_BUNDLE.crt"
+#    export AWS_CA_BUNDLE="/Users/edwardli/.certs/FW_BUNDLE.crt"
+#    export REQUESTS_CA_BUNDLE="/Users/edwardli/.certs/FW_BUNDLE.crt"
  
 #   ---------------------------------------
 #   GIT
